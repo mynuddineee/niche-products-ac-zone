@@ -18,7 +18,7 @@ const ManageProducts = () => {
     },[])
 
     const handleDelete = (id) => {
-        const url = `https://afternoon-wildwood-28226.herokuapp.com/deleteOrder/${id}`;
+        const url = `https://afternoon-wildwood-28226.herokuapp.com/deleteProduct/${id}`;
         fetch(url, {
 
             method: 'DELETE'
