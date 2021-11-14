@@ -10,15 +10,15 @@ const MakeAdmin = e => {
 
     const handleOnBlur = e => {
 
-        setEmail(e.target.value)
+        setEmail(e.target.value);
     }
-    const handleAdminSubmit = () => {
+    const handleAdminSubmit = (e) => {
 
-        const user = {email}
-        fetch('https://afternoon-wildwood-28226.herokuapp.com/users/admin',{
+    const user = {email}
+    fetch('https://afternoon-wildwood-28226.herokuapp.com/users/admin',{
 
         method: 'PUT',
-        headers: { 'Content-Type': 'application/json'},
+        headers: { 'content-type': 'application/json'},
         body: JSON.stringify(user)
         })
         .then(res => res.json())
@@ -47,7 +47,7 @@ const MakeAdmin = e => {
         type="email" />
         <Button type="submit" variant="contained">Make Admin</Button>
         </form>
-        {success && <Alert severity="success">Make Admin successfully!</Alert>}
+        {success && <Alert severity="success"> Admin created successfully!</Alert>}
     </div>
     );
 };

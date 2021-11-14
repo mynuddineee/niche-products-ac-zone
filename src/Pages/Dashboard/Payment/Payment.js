@@ -6,7 +6,7 @@ const Payment = () => {
     return (
         <div>
             <Navigation></Navigation>
-            <h2 className="px-4">Payment System Coming Soon</h2>
+            <h1 className="px-4 my-5">Payment System is Coming Soon</h1>
             <Footer></Footer>
         </div>
     );
