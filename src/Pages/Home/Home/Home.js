@@ -1,5 +1,5 @@
 import React from 'react';
-import ExploreProducts from '../../ExploreProducts/ExploreProducts/ExploreProducts';
+
 import Banner from '../Banner/Banner';
 import ContactUs from '../ContactUS/ContactUs';
 import Navigation from '../../Shared/Navigation/Navigation';

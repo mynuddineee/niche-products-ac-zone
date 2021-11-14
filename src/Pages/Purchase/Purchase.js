@@ -5,7 +5,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import { useForm } from "react-hook-form";
-import { Card, Col, Container, Row } from "react-bootstrap";
+
 import { useParams } from 'react-router-dom';
 
 import axios from 'axios';
@@ -52,7 +52,7 @@ const Purchase = () => {
     }
     useEffect(() =>{
 
-        fetch('http://localhost:5000/products')
+        fetch('https://afternoon-wildwood-28226.herokuapp.com/products')
         
         .then((res) => res.json())
         .then((data) => setProductDetails(data));
@@ -81,7 +81,7 @@ const Purchase = () => {
        
         //const savedCart = getStoredCart();
        //data.order = savedCart;
-      axios.post('http://localhost:5000/orders', data)
+      axios.post('https://afternoon-wildwood-28226.herokuapp.com/orders', data)
      .then(res => {
 
             if(res.data.insertedId){

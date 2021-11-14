@@ -2,6 +2,8 @@ import { Alert, Button, CircularProgress, Container, Grid, TextField, Typography
 import React, { useState } from 'react';
 import { NavLink, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
+import Footer from '../../Shared/Footer/Footer';
+import Navigation from '../../Shared/Navigation/Navigation';
 
 const Login = () => {
 
@@ -31,6 +33,8 @@ const Login = () => {
     }
 
     return (
+        <>
+        <Navigation></Navigation>
         <Container>
 
         <Grid container spacing={2}>
@@ -67,6 +71,8 @@ const Login = () => {
             
         </Grid>
         </Container>
+        <Footer></Footer>
+        </>
     );
 };
 

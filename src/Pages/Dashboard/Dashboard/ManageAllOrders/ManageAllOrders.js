@@ -21,14 +21,14 @@ const ManageAllOrders = () => {
     
     useEffect( () => {
 
-        fetch('http://localhost:5000/orders')
+        fetch('https://afternoon-wildwood-28226.herokuapp.com/orders')
         .then(res => res.json())
         .then(data => setMyOrders(data));
     },[])
 
     const handleUpdate = (id)=> {
 
-        fetch(`http://localhost:5000/updateStatus/${id}`,{
+        fetch(`https://afternoon-wildwood-28226.herokuapp.com/updateStatus/${id}`,{
 
             method: 'PUT',
             headers: {'content-type': 'application/json'},
@@ -40,7 +40,7 @@ const ManageAllOrders = () => {
     }
 
     const handleDelete = (id) => {
-        const url = `http://localhost:5000/deleteOrder/${id}`;
+        const url = `https://afternoon-wildwood-28226.herokuapp.com/deleteOrder/${id}`;
         fetch(url, {
 
             method: 'DELETE'

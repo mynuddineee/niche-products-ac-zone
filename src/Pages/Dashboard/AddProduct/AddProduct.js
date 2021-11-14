@@ -10,7 +10,7 @@ const AddProduct = () => {
     const onSubmit = data => {
         console.log(data)
 
-        axios.post('http://localhost:5000/addProduct', data)
+        axios.post('https://afternoon-wildwood-28226.herokuapp.com/addProduct', data)
         .then(res => {
 
             if(res.data.insertedId){

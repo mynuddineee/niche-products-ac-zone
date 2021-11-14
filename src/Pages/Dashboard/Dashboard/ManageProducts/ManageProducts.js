@@ -12,13 +12,13 @@ const ManageProducts = () => {
     
     useEffect( () => {
 
-        fetch('http://localhost:5000/explores')
+        fetch('https://afternoon-wildwood-28226.herokuapp.com/explores')
         .then(res => res.json())
         .then(data => setMyOrders(data));
     },[])
 
     const handleDelete = (id) => {
-        const url = `http://localhost:5000/deleteOrder/${id}`;
+        const url = `https://afternoon-wildwood-28226.herokuapp.com/deleteOrder/${id}`;
         fetch(url, {
 
             method: 'DELETE'

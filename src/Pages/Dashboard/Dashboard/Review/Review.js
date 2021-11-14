@@ -12,7 +12,7 @@ const Review = () => {
     const onSubmit = data => {
         console.log(data)
 
-        axios.post('http://localhost:5000/addReview', data)
+        axios.post('https://afternoon-wildwood-28226.herokuapp.com/addReview', data)
         .then(res => {
 
             if(res.data.insertedId){
@@ -27,7 +27,7 @@ const Review = () => {
         <>
         <Navigation></Navigation>
         <div>
-            <h2 className=" mb-4 mt-2">Add Your Review Here</h2>
+            <h2 className=" mb-5 mt-5">Add Your Review Here</h2>
 
         <form onSubmit={handleSubmit(onSubmit)}>
             
@@ -45,7 +45,7 @@ const Review = () => {
             
             
             
-            <input type="submit" value="Add Review" className="place-button bg-success mb-4 mt-2 " />
+            <input type="submit" value="Add Review" className="place-button bg-success mb-5 mt-2 " />
       </form>
         </div>
         <Footer></Footer>

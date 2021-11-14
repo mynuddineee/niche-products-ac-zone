@@ -15,7 +15,7 @@ const Navigation = () => {
     const {user, logout} = useAuth();
     return (
         <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static">
+        <AppBar position="static" style={{ backgroundColor: '#21cc87' }}>
           <Toolbar>
             <IconButton
               size="large"

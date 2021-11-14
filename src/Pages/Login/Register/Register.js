@@ -2,6 +2,8 @@ import { Alert, Button, CircularProgress, Container, Grid, TextField, Typography
 import React, { useState} from 'react';
 import { NavLink, useHistory  } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
+import Footer from '../../Shared/Footer/Footer';
+import Navigation from '../../Shared/Navigation/Navigation';
 
 
 
@@ -36,6 +38,8 @@ const Register = () => {
 
 
     return (
+        <>
+        <Navigation></Navigation>
         <Container>
 
         <Grid container spacing={2}>
@@ -110,6 +114,8 @@ const Register = () => {
             
         </Grid>
         </Container>
+        <Footer></Footer>
+        </>
     );
 };
 

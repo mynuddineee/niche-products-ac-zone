@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 
 const ExploreProduct = ({explore}) => {
     const {img, name, description, price} = explore;
@@ -7,9 +7,9 @@ const ExploreProduct = ({explore}) => {
         <div>
             <div className="container-fluid">
                 <div className="row g-4">
-                        <div className="col  my-4">
+                        <div  className="col   my-4">
                             <div className="card ">
-                            <img  src={img} className="img-fluid " alt="..."/>
+                            <img style={{ height: "50vh" }}  src={img} className="img-fluid " alt="..."/>
                             <div className="card-body">
                                 <h5 className="card-title">Name: {name}</h5>
                                 <h6 className="card-text">Description: {description}</h6>

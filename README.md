@@ -2,7 +2,7 @@
 
 # Description: AC-Zone is a online AC delivery  portal. A person can order their desired products from home or any place through mobile or computer. 
 
-# Live site link: https://AC-Zone-authentication.web.app
+# Live site link: https://niche-products-ba03c.web.app
 
 # From this website you will know the following things
 

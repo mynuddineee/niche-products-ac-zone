@@ -16,13 +16,13 @@ const MyOrders = () => {
     
     useEffect( () => {
 
-        fetch(`http://localhost:5000/orders?email=${email}`)
+        fetch(`https://afternoon-wildwood-28226.herokuapp.com/orders?email=${email}`)
         .then(res => res.json())
         .then(data => setMyOrders(data));
     },[])
 
     const handleDelete = (id) => {
-        const url = `http://localhost:5000/deleteOrder/${id}`;
+        const url = `https://afternoon-wildwood-28226.herokuapp.com/deleteOrder/${id}`;
         fetch(url, {
 
             method: 'DELETE'
