@@ -1,0 +1,25 @@
+ul.no-bullets {
+    list-style-type: none;
+    display:table;
+    
+    
+  }
+
+.footer_widget{
+
+    
+}
+
+  .footer-top{
+
+    background-color:black;
+    color: white;
+    align-items: left;
+    padding-top: 20px;
+    margin-top: 20px;
+    
+  }
+  .inside-text{
+
+    font-size: 12px;
+  }

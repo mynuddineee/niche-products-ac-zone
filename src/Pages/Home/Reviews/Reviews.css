@@ -1,0 +1,10 @@
+.counter-text{
+    font-size: 100px;
+    font-weight: 700;
+    background: -webkit-linear-gradient(red, orange);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.title-text{
+    font-size: 24px;
+}

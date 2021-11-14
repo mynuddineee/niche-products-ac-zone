@@ -1,0 +1,30 @@
+
+.page-notfound{
+
+    background-color: aquamarine;
+    font-size: 100 px;
+    font-weight: bolder;
+    color: goldenrod;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.button-page{
+
+    margin-bottom: 100px;
+    background-color: aquamarine;
+    border-radius: 1px solid black;
+
+
+}
+
+.nav-link{
+    color: white;
+    text-decoration: none;
+}
+
+.img2{
+    width: 400px;
+    height: 400px;
+}
