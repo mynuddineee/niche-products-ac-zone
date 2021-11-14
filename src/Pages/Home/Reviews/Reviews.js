@@ -1,31 +1,44 @@
-import React from 'react';
+import Rating from 'react-rating';
+import React, { useEffect, useState } from 'react';
 import './Reviews.css';
 
 const Reviews = () => {
+
+    const [reviews, setReviews] = useState([]);
+
+    useEffect( () => {
+
+        fetch('http://localhost:5000/reviews')
+        .then(res => res.json())
+        .then(data => setReviews(data))
+
+
+    },[])
     return (
         <>
             <h2>Reviews</h2>
-        <div className="container-fluid mt-5 mb-5 ">
-            
-            <div className="row">
-                <div className="col-lg-4 col-sm-12">
-                    <p className="text-center counter-text">250</p>
-                    <p className="text-center title-text">Website Reviews</p>
+            <div className="container-fluid mt-5 mb-5 ">
+                
+                <div className="row">
+                    {
 
-                </div>
-                <div className="col-lg-4 col-sm-12">
-                    <p className="text-center counter-text">80</p>
-                    <p className="text-center title-text">Awards</p>
-
-                </div>
-                <div className="col-lg-4 col-sm-12">
-                    <p className="text-center counter-text">5000+</p>
-                    <p className="text-center title-text">Satisfied Customers</p>
-
+                        reviews?.map((review) => <div className="col-lg-4 col-sm-12" key ={review?._id}>
+                        <p className="text-center counter-text">{review?.rating}</p>
+                        <Rating
+                            initialRating = {review?.rating}
+                            emptySymbol="far fa-star icon-color"
+                            fullSymbol="fas fa-star icon-color"
+                            readonly
+                            >
+                        </Rating>
+                        <p className="text-center title-text">Website Reviews</p>
+                        
+                    </div>)
+                    }
+                    
                 </div>
             </div>
-        </div>
-    </>
+        </>
     );
 };
 

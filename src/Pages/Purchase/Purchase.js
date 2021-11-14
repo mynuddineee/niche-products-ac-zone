@@ -75,7 +75,7 @@ const Purchase = () => {
     
     const onSubmit = data => {
 
-    
+    data.status = 'pending';
 
 
        

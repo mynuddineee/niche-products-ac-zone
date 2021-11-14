@@ -45,37 +45,37 @@ const MyOrders = () => {
     return (
         <div>
             <Navigation></Navigation>
-            <h2>My Orders:{myOrders?.length}</h2>
+            <h2 className="my-4">My Orders:{myOrders?.length}</h2>
             
 
-      <div className="services">
-        <div className="row ">
-          {myOrders?.map((myOrder) => (<div className="col" key ={myOrder?._id}>
-             
-            
-              <div className="service border border p-3">
-                <div className="services-img ">
-                  <img className="w-50" src={myOrder?.imgUrl} alt="" />
+            <div className="services">
+                <div className="row ">
+                {myOrders?.map((myOrder) => (<div className="col" key ={myOrder?._id}>
+                    
+                    
+                    <div className="service border border p-3">
+                        <div className="services-img ">
+                        <img className="w-50" src={myOrder?.imgUrl} alt="" />
+                        </div>
+
+                        <h6  >{myOrder?.productName}</h6>
+                        
+                        <p>{myOrder?.description}</p>
+                        <h3 className="text-danger"> Quantity :{myOrder?.quantity}</h3>
+                        <h3 className="text-danger"> Price :{myOrder?.price} Taka</h3>
+
+                        <button
+                        onClick={() => handleDelete(myOrder?._id)}
+                        className="btn btn-danger"
+                        >
+                        Delete
+                        </button>
+                    </div>
+                    </div>
+                ))}
                 </div>
-
-                <h6  >{myOrder?.productName}</h6>
-                
-                <p>{myOrder?.description}</p>
-                <h3 className="text-danger"> Quantity :{myOrder?.quantity}</h3>
-                <h3 className="text-danger"> Price :{myOrder?.price} Taka</h3>
-
-                <button
-                  onClick={() => handleDelete(myOrder?._id)}
-                  className="btn btn-danger"
-                >
-                  Delete
-                </button>
-              </div>
             </div>
-          ))}
-        </div>
-      </div>
-      <Footer></Footer>
+            <Footer></Footer>
         </div>
     );
 };
